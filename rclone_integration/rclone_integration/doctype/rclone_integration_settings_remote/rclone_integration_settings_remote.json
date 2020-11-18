@@ -1,0 +1,29 @@
+{
+ "creation": "2020-11-18 16:56:57.410240",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "remote_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "remote_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remote Name",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-11-18 17:24:20.496406",
+ "modified_by": "Administrator",
+ "module": "Rclone Integration",
+ "name": "Rclone Integration Settings Remote",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

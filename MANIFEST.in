@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include rclone_integration *.css
+recursive-include rclone_integration *.csv
+recursive-include rclone_integration *.html
+recursive-include rclone_integration *.ico
+recursive-include rclone_integration *.js
+recursive-include rclone_integration *.json
+recursive-include rclone_integration *.md
+recursive-include rclone_integration *.png
+recursive-include rclone_integration *.py
+recursive-include rclone_integration *.svg
+recursive-include rclone_integration *.txt
+recursive-exclude rclone_integration *.pyc
