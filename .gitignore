@@ -4,3 +4,4 @@
 *.swp
 tags
 rclone_integration/docs/current
+.idea
