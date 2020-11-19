@@ -6,7 +6,7 @@ import os
 
 
 def enqueue_sync():
-    enqueue('rclone_integration.scheduler_events.backup._execute')
+    enqueue("rclone_integration.scheduler_events.backup._execute")
 
 
 def _execute():
@@ -26,4 +26,9 @@ def _execute():
             frappe.log_error(
                 "Error in copying backup to remote", "Rclone Integration Backup Error"
             )
-    frappe.db.set_value("Rclone Integration Settings", "Rclone Integration Settings", "latest_backup_at", now())
+    frappe.db.set_value(
+        "Rclone Integration Settings",
+        "Rclone Integration Settings",
+        "latest_backup_at",
+        now(),
+    )
