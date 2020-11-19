@@ -4,7 +4,6 @@
 frappe.ui.form.on('Rclone Integration Settings', {
   refresh: function (frm) {
     _add_sync_backup(frm);
-    frm.set_df_property('remotes', 'read_only', 1);
   },
   get_config: async function (frm) {
     const { message: config } = await frappe.call({
