@@ -17,6 +17,8 @@ def _execute():
             "Rclone Integration Settings Remote", fields=["remote_name"]
         )
     ]
+
+    has_synced = False
     for remote in remotes:
         stream = os.popen(
             "rclone copy %(source)s %(remote)s:" % {"source": source, "remote": remote}
@@ -26,9 +28,12 @@ def _execute():
             frappe.log_error(
                 "Error in copying backup to remote", "Rclone Integration Backup Error"
             )
-    frappe.db.set_value(
-        "Rclone Integration Settings",
-        "Rclone Integration Settings",
-        "latest_backup_at",
-        now(),
-    )
+        has_synced = True
+
+    if has_synced:
+        frappe.db.set_value(
+            "Rclone Integration Settings",
+            "Rclone Integration Settings",
+            "latest_backup_at",
+            now(),
+        )
